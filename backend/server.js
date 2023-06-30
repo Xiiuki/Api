@@ -1,7 +1,12 @@
 const express = require("express");
 const app = express();
 const port = 8081;
+const connectDB = require("./db/database");
+const dotenv = require("dotenv").config();
 
+
+// Connection MongoDB
+connectDB()
 
 // Middleware pour traiter les données
 app.use(express.json());
