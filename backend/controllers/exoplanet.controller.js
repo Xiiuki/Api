@@ -1,7 +1,7 @@
 const exoplanetModel = require ('../models/exoplanet.model')
 
 //POST
-module.exports.setExoplanetsPost = async (req, res, next) => {
+module.exports.setExoplanetsPost = async (req, res) => {
     try {
         delete req.body._id;
         const exoplanet = new exoplanetModel({
@@ -17,14 +17,14 @@ module.exports.setExoplanetsPost = async (req, res, next) => {
 };
 
 //GET ALL
-module.exports.getExoplanetsAll = async (req, res, next) => {
+module.exports.getExoplanetsAll = async (req, res) => {
     exoplanetModel.find()
         .then(exoplanetshema => res.status(201).json(exoplanetshema))
         .catch(error => res.status(400).json({ error }));
 };
 
 //GET ONE
-module.exports.getExoplanetsOne = async (req, res, next) => {
+module.exports.getExoplanetsOne = async (req, res) => {
     try {
         const exoplanet = await exoplanetModel.findOne({ planet_name: req.params.planet_name });
 
