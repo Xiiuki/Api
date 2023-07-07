@@ -1,3 +1,6 @@
+// Connection à la basse de donnée MongoDB en utilisant le .env URI
+// Deux console.log pour permettre de connaître l'état de la conenction 
+
 const  mongoose = require('mongoose');
 const connectDB = async() =>{
 

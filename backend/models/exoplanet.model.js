@@ -1,3 +1,5 @@
+// Schema pour la base de donnée MongoDB des exoplanets 
+
 const mongoose = require('mongoose')
 
 const exoplanetSchema = mongoose.Schema(

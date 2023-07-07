@@ -1,3 +1,4 @@
+//Import
 const express = require('express');
 const { setExoplanetsPost, getExoplanetsAll, updateExoplanets, getExoplanetsOne, deleteExoplanets } = require('../controllers/exoplanet.controller');
 const router = express.Router();
@@ -17,5 +18,6 @@ router.put("/update/:planet_name", updateExoplanets)
 
 //DELETE
 router.delete("/delete/:planet_name", deleteExoplanets)
-//
+
+//Exportation
 module.exports = router; 
