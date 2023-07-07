@@ -1,3 +1,4 @@
+//Import
 const exoplanetModel = require ('../models/exoplanet.model')
 
 //POST
@@ -8,7 +9,7 @@ module.exports.setExoplanetsPost = async (req, res) => {
             ...req.body
         });
         exoplanet.save()
-            .then(() => res.status(201).json({ message: "Object is saved !"}))
+            .then(() => res.status(201).json({ message: "Object is saved !", exoplanet}))
             .catch(error => res.status(400).json({ error }));
 
     } catch (error) {
@@ -52,7 +53,7 @@ module.exports.updateExoplanets = async (req, res) => {
         exoplanet.set(req.body);
         await exoplanet.save();
 
-        res.status(200).json({ message: "This exoplanet has been updated successfully!" });
+        res.status(200).json({ message: "This exoplanet has been updated successfully!", exoplanet});
     } catch (error) {
         res.status(400).json({ error });
     }
