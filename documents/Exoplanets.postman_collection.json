@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "0148feb4-ffb5-4ec7-ac8e-6e6f11d63e4a",
+		"name": "Exoplanets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14058164"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/exoplanet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/exoplanet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"exoplanet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/exoplanet/one/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/exoplanet/one/11%20Com%20b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"exoplanet",
+						"one",
+						"11%20Com%20b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/exoplanet/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "planet_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "planet_name",
+							"value": "11 UMi b",
+							"type": "text"
+						},
+						{
+							"key": "planet_letter",
+							"value": "b ",
+							"type": "text"
+						},
+						{
+							"key": "planet_orbper",
+							"value": "516.22",
+							"type": "text"
+						},
+						{
+							"key": "planet_bmasse",
+							"value": "4684.81",
+							"type": "text"
+						},
+						{
+							"key": "planet_dens",
+							"value": "13.8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/exoplanet/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"exoplanet",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/exoplanet/update/11%20Com%20b",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "planet_name",
+							"value": "11 Com b",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/exoplanet/update/11%20Com%20b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"exoplanet",
+						"update",
+						"11%20Com%20b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/exoplanet/delete/11%20Com%20b",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/exoplanet/delete/11%20Com%20b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"exoplanet",
+						"delete",
+						"11%20Com%20b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
